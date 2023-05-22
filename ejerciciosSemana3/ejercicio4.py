@@ -3,6 +3,7 @@
 numeros_pares=1
 
 while numeros_pares <= 100:
+    numeros_pares +=1
     if numeros_pares %2== 0:
         print(f' el {numeros_pares} es par.')
-        print("hola")
+        
