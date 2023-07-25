@@ -1,0 +1,79 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="es-ar">
+
+<head>
+  <title>{% block title%}Pagina de inicio {% endblock title%}</title> 
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+    <a class="flex-sm-fill text-sm-center nav-link activate" href="#">
+        <img src="{% static 'img/info.jpg' %}"style="max-width: 300px; margin: 30px;">  
+    </a>
+    
+    <nav class= "nav nav-pills flex-colum flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link activate" href=" {% url 'index' %}"> Inicio </a>
+      <a class="flex-sm-fill text-sm-center nav-link activate" href="{% url 'apps.posts:posts' %}"> Posts</a>
+      <a class="flex-sm-fill text-sm-center nav-link activate" href="#"> Registro</a>
+      <a class="flex-sm-fill text-sm-center nav-link activate" href="#"> Acerca de nosotros</a>
+      <a class="flex-sm-fill text-sm-center nav-link activate" href="{% url 'apps.contacto:contacto' %}"> Contacto</a>
+      <a class="flex-sm-fill text-sm-center nav-link disabled" href="#" tabindex="-1" aria-disabled=" true">Disabled</a>
+    </nav>
+    
+      
+<!-- <html><body>
+  <header><nav>
+    <ul class= "nav-links">
+    <li><a href=" {% url 'index' %}">Inicio</a></li>
+     <li><a href="#" >Aceerca de nosotros</a></li> -->
+    <!-- <li><a href="{% url 'apps.posts:posts' %}">Posts</a></li> -->
+    <!-- <li><a href="#" >Contacto</a></li>
+    <li><a href="#" >Registro</a></li>
+</ul>
+</nav></header>
+</body></html> -->
+      <!-- --> 
+    
+
+{% block contenido %}
+<div class="container-fluid" style="margin: 200px;"></div>
+
+{% endblock %}
+    
+  </header>
+  <main>
+
+  </main>
+  <footer id="stycky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class=" container text-center">
+      <small> Copyright 2023 &copy; www.bloginfo2023.com</small>
+
+    </div>
+    <nav><a class="flex-sm-fill text-sm-right nav-link activate" href="#"> Registro</a>
+         <a class="flex-sm-fill text-sm-right nav-link activate" href="#"> Acerca de nosotros</a>
+    </nav>
+  </footer>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
